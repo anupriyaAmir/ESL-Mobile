@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamNative.Secondpage"             
+             Title="Electronic Shelf Labeling">
+    <ContentPage.Content>
+
+
+        
+        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center">
+
+            <Image Source="bg.png" />
+            <Label Text=""></Label>
+            <Label Text=""></Label>
+            
+            <Button Text=""                
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    BorderRadius="30"
+                    BorderWidth="-3"
+                    
+                    Clicked="Review_me"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Image="btn1.png"/>
+
+            <Button Text=""                  
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    
+                    BorderRadius="30"
+                    BorderWidth="-3"
+                      
+                    Clicked="ESL"
+                  
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Image="btn2.png"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

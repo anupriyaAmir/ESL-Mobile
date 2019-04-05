@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamNative.HumanPage"
+             xmlns:local="clr-namespace:XamNative" 
+             Title="Review and Approve Retails"
+             BackgroundColor="White">
+
+    <StackLayout Spacing="0" Orientation="Vertical" Padding="0" >
+       <Button BorderRadius="10"  Margin="2,2,2,4" Clicked="accept" Text="Approve" TextColor="White" HeightRequest="40" WidthRequest="10"
+          BackgroundColor="#58DA30"  />
+        <Button BorderRadius="10"  Margin="2,2,2,4" Text="Reject" Clicked="reject" TextColor="White" HeightRequest="40" WidthRequest="20"
+          BackgroundColor="#FC3E18"   />
+
+        <StackLayout x:Name="entirePage">
+            <ScrollView VerticalOptions="FillAndExpand"
+            Orientation="Vertical">
+
+                <ListView x:Name="ProductsListView"
+              HasUnevenRows="True"
+              BackgroundColor="#ecf0f1"
+              SeparatorVisibility="None"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="6,4,6,4"
+                                 BackgroundColor="White">
+
+                                   
+                                    
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding name}" Margin="25,10,4,4" Font="Bold,20" HorizontalOptions="StartAndExpand" FontSize="Small" TextColor="Black"  />
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                        <Switch IsToggled="True"  Toggled="Switch_Toggled" />
+                                       
+                                    </StackLayout>
+
+                                   
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding retail_modified_item_id}" Margin="25,1,1,1" HorizontalOptions="StartAndExpand" TextColor="Gray" FontSize="12" />
+                                              <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="OldPrice :"  Margin="25,2,8,4" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+                                        <Label Text="{Binding old_price}"   Margin="32,1,8,4" TextColor="Black" FontSize="Small" />
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="NewPrice :" Margin="25,2,8,4" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small" />
+                                        <Label Text="{Binding new_price}"  Margin="32,1,8,4" TextColor="Black" FontSize="Small" />
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+
+    </StackLayout>
+    <!--entirePage-->
+   
+</ContentPage>

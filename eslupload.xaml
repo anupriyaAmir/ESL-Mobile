@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamNative.eslupload"
+             Title="Upload to ESL">
+    <StackLayout Spacing="0" Orientation="Vertical" Padding="0" >
+
+        <Button BorderRadius="10"   Clicked="upload"  Margin="2,2,2,4" Text="Upload To ESL" TextColor="White" HeightRequest="40" WidthRequest="10"
+          BackgroundColor="#3099F5"  />
+
+        <StackLayout x:Name="entirePage">
+            <ScrollView VerticalOptions="FillAndExpand"
+            Orientation="Vertical">
+
+                <ListView x:Name="ProductsListView1"
+              HasUnevenRows="True"
+              BackgroundColor="#ecf0f1"
+              SeparatorVisibility="None"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="6,4,6,4"  BackgroundColor="White">
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Item ID" Margin="25,2,8,4" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small" />
+                                        <Label x:Name="MyLabel" Text="{Binding retail_modified_item_id}"  Margin="32,1,8,4" TextColor="Black" FontSize="Small" />
+
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Name" Margin="25,2,8,4" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small" />
+                                        <Label Text="{Binding item_name }" Margin="32,1,8,4" TextColor="Black" FontSize="Small" />
+
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Price" Margin="25,2,8,4" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small" />
+                                        <Label Text="{Binding price }" Margin="32,1,8,4" TextColor="Black" FontSize="Small" />
+
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Device ID" Margin="25,2,8,4" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small" />
+                                        <Label Text="{Binding device_id }" Margin="32,1,8,4" TextColor="Black" FontSize="Small" />
+
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
+                                        <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Status" Margin="25,2,8,4" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small" />
+                                        <Label Text="{Binding updated }" Margin="32,1,8,4" TextColor="Black" FontSize="Small" />
+
+                                    </StackLayout>
+                                   
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+    </StackLayout>
+    <!--entirePage-->
+</ContentPage>
